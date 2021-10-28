@@ -1,3 +1,41 @@
-.testcss {
-    color:red;
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.checked {
+    position: absolute;
+    right: 50px;
+    color: white;
+    background-color: greenyellow;
+    border: 0px;
+    border-radius: 5px;
+}
+.delete{
+    position:absolute;
+    right: 20px;
+    color:white;
+    background-color: crimson;
+    border: 0px;
+    border-radius: 5px;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.listItem {
+    background-color:white;
+    padding: 10px;
+    border: 2px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: solid 1px darkgray;
+    box-shadow: 2px 2px 5px #aaaaaa;
+}
+
+.listArea {
+    margin-top: 5px;
+    height: fit-content;
 }
