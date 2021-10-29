@@ -8,14 +8,24 @@ function addToList(){
     li.appendChild(txtNode);
     
     //Listaan lisätään uusi rivi vain jos käyttäjä on kirjoittanut jotain syöttökenttään ja se on alle 30 merkkiä pitkä. Muuten annetaan varoitus.
+    var inputArea = document.getElementById("usrInput");
+    var warning1 = document.getElementById("warning1");
+    var warning2 = document.getElementById("warning2");
+    warning1.style.display = "none";
+    warning2.style.display = "none";
     if(txt == ""){
-        alert("You need to write something first!");
+        inputArea.style.borderColor = "red";
+        warning1.style.display = "block";
     }
     else if(txt.length > 30){
-        alert("Please do not enter more than 30 characters.");
+        inputArea.style.borderColor = "red";
+        warning2.style.display = "block";
     }
     else{
         document.getElementById("theList").appendChild(li);
+        inputArea.style.borderColor = "initial";
+        warning1.style.display = "none";
+        warning2.style.display = "none";
     }
     
     //Seuraava koodin pätkä pyyhkii syöttökentän sen jälkeen, kun uusi rivi on luotu.
@@ -230,5 +240,35 @@ function retrieveList(){
                 listContent.remove();
             }
         }
+    }
+}
+
+//Seuraavan kahden funktion avulla voimme piilottaa ja näyttää molempia listoja. Näkyvyyden vaihtamisen yhteydessä myös napin ikoni vaihdetaan.
+
+function hideActive(){
+    var active = document.getElementById("theList");
+    var toggle = document.getElementById("vToggle");
+        
+    if(active.style.display === "none"){
+        active.style.display = "block";
+        toggle.innerHTML = "<i class=\"fas fa-eye-slash\"></i> HIDE";
+    }
+    else {
+        active.style.display = "none";
+        toggle.innerHTML = "<i class=\"fas fa-eye\"></i> SHOW";
+    }
+}
+
+function hideCompleted(){
+    var completed = document.getElementById("theList2");
+    var toggle = document.getElementById("vToggle2");
+
+    if(completed.style.display === "block"){
+        completed.style.display = "none";
+        toggle.innerHTML = "<i class=\"fas fa-eye\"></i> SHOW";
+    }
+    else {
+        completed.style.display = "block";
+        toggle.innerHTML = "<i class=\"fas fa-eye-slash\"></i> HIDE";
     }
 }

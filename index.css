@@ -5,7 +5,7 @@ ul {
 
 .checked {
     position: absolute;
-    right: 50px;
+    right: 55px;
     color: white;
     background-color: greenyellow;
     border: 0px;
@@ -13,7 +13,7 @@ ul {
 }
 .delete{
     position:absolute;
-    right: 20px;
+    right: 25px;
     color:white;
     background-color: crimson;
     border: 0px;
@@ -23,6 +23,8 @@ ul {
 
 h1 {
     text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .listItem {
@@ -38,4 +40,45 @@ h1 {
 .listArea {
     margin-top: 5px;
     height: fit-content;
+}
+
+.activeList {
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.completedList {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.activeHeader {
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.completedHeader {
+    background-color: yellowgreen;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-outline-dark {
+    position: absolute;
+    right: 30px;
+}
+
+.warning1 {
+    display: none;
+    color: red;
+}
+
+.warning2 {
+    display: none;
+    color: red;
+}
+
+.theList2 {
+    display: none;
 }
