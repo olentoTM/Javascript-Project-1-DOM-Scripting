@@ -53,18 +53,26 @@ h1 {
 }
 
 .activeHeader {
-    background-color: orange;
+    background-color: white;
     padding: 10px;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
 .completedHeader {
-    background-color: yellowgreen;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    border: 1px solid rgb(44, 44, 44);
     padding: 10px;
     border-radius: 5px;
 }
 
 .btn-outline-dark {
+    position: absolute;
+    right: 30px;
+}
+
+.btn-outline-light {
     position: absolute;
     right: 30px;
 }
